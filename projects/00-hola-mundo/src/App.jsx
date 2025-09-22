@@ -1,19 +1,14 @@
 import './App.css'
+import { TwitterFollowCard } from './TwitterFollowCard.jsx'
 export function App () {
     return (
-        <article className='tw-followCard'>
-            <header className='tw-followCard-header'>
-                <img className='tw-followCard-avatar' alt="El avatar de davidcobe04" src="https://avatars.githubusercontent.com/u/172441724?s=48&v=4" />
-                <div className='tw-followCard-info'>
-                    <strong>David Cotrina</strong>
-                    <span className='tw-followCard-username'>@davidcobe04</span>
-                </div>
-            </header>
-            <aside>
-                <button className='tw-followCard-button'>
-                    Seguir
-                </button>
-            </aside>
-        </article>
+        <section className='App'> 
+        { /* Es igual a poner <React.Fragment> <React.Fragment /> pero poniendo <> </> se hace más limpio y legible*/ }
+            <TwitterFollowCard userName="davidcobe04" name="David Cotrina" isFollowing />
+            <TwitterFollowCard userName="midudev" name="Miguel Ángel Durán" />
+            <TwitterFollowCard userName="pheralb" name="Pablo Hernández" isFollowing />
+            <TwitterFollowCard userName="elonmusk" name="Elon Musk" />
+            <TwitterFollowCard userName="vxnder" name="VanderHart" isFollowing />
+        </section>
     )
 }
